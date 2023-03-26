@@ -22,14 +22,19 @@ function App() {
 
   return (
     <>
-      <h1 id="header">Markdown Practice Editor</h1>
+      <div id="header">
+        <h1 id="MD">MD</h1>
+        <h2 id="md-editor">MARKDOWN EDITOR</h2>
+        <h2 id="lets-greek">&#956;&#948;</h2>
+      </div>
       <Container id="md-display-box">
         <Row>
-          <Col xs={5} id="markdown-heading">
-          <h3>Markdown Editor</h3>
+          <Col xs={2} id="editor-heading">
+            <h4>Editor</h4>
           </Col>
-          <Col xs={7} id="preview-heading">
-          <h3>Document Display</h3>
+          <Col xs={3}></Col>
+          <Col xs={2} id="preview-heading">
+            <h4>Display</h4>
           </Col>
         </Row>
         <Row>

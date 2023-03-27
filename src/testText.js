@@ -21,10 +21,16 @@ Unordered List:
 
 [link](http://www.freecodecamp.org)
 
+Write some \`<p>inline code</p>\`
+
 Write a code block...
 \`\`\`
 <div>
     <h1>Code Sample</h1>
 </div>
 \`\`\`
+
+Add an image...
+
+![atom image](atom.png)
 `;

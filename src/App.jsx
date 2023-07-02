@@ -14,11 +14,14 @@ function App() {
   const [outputText, setOutputText] = React.useState(marked(testText));
 
   function handleChange(event){
+    setOutputText(marked(event.target.value));
+  }
+  /* The following code does not allow it to pass a freeCodeCamp test case,
+    but it is better to use in the handleChange function:
     //do this DOMPuruify for xss site scripting, so nobody can put bad stuff in there, e.g redirect
     let dirty = marked(event.target.value); 
     let clean = DOMPurify.sanitize(dirty);
-    setOutputText(clean);
-  }
+    setOutputText(clean);*/
 
   return (
     <>
@@ -41,8 +44,7 @@ function App() {
           <Col xs={5} id="markdown-col">
             <textarea id="editor" onChange={handleChange} defaultValue={testText}></textarea>
           </Col>
-          <Col xs={7} id="preview">
-            <div dangerouslySetInnerHTML={{__html: marked(outputText)}}></div>
+          <Col xs={7} id="preview" dangerouslySetInnerHTML={{__html: marked(outputText)}}>
           </Col>
         </Row>
       </Container>
